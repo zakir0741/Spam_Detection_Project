@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction Result</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100 font-sans">
+  <div class="max-w-xl mx-auto mt-20 p-10 bg-white rounded-2xl shadow-lg">
+    <h2 class="text-2xl font-bold text-center text-purple-600 mb-4">📩 Prediction Result</h2>
+
+    <div class="bg-gray-50 p-4 rounded-lg border mb-4">
+      <p class="mb-2"><strong>🔍 Message:</strong></p>
+      <p class="text-gray-700 italic">{{ message }}</p>
+    </div>
+
+    <div class="mb-4">
+      <p class="text-lg"><strong>Prediction:</strong>
+        <span class="font-bold {{ 'text-red-600' if prediction == 'Spam' else 'text-green-600' }}">{{ prediction }}</span>
+      </p>
+    </div>
+
+    <hr class="my-4">
+
+    <div class="bg-purple-100 p-4 rounded-lg border border-purple-300">
+      <p class="text-purple-800 font-semibold">🤖 Chatbot Suggestion:</p>
+      <p class="mt-2">{{ suggestion }}</p>
+    </div>
+
+    <div class="text-center mt-6">
+      <a href="/" class="text-purple-600 hover:underline">🔁 Check another message</a>
+    </div>
+  </div>
+</body>
+</html>
